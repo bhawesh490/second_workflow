@@ -1,0 +1,54 @@
+# yml code for installing npm and running test
+##################################################################
+# name: Test Project
+# on: push
+# jobs:
+#   test:
+#     runs-on: Ubuntu-latest
+#     steps:
+#       - name: Get Code
+#         uses: actions/checkout@v3
+#       - name: Install Node JS
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#       - name: Install Dependencies
+#         run: npm ci
+#       - name: Run Tests
+#         run: npm test
+
+#######################################################################        
+
+name: Deployment Project
+on: push
+jobs:
+  test:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install Node JS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test
+  deploy:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install Node JS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test
+      - name: Build Project
+        run: npm run build 
+      - name: Deploy
+        run: echo "Deploying Finally--"       
