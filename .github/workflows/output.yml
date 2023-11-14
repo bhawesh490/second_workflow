@@ -1,4 +1,4 @@
-# this file contains the context of git hub environment
+# this file contains the context of git hub environment and prints test execution
 name: Output Information
 on: workflow_dispatch
 jobs:
