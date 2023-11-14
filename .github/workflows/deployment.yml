@@ -93,7 +93,7 @@
 ##############################################################################################
 # multiple triggers
 name: Deployment Project in sequentially
-on: [push,workflow-dispatch]
+on: [push,workflow_dispatch]
 jobs:
   test:
     runs-on: Ubuntu-latest
