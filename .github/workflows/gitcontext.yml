@@ -1,5 +1,5 @@
 # this file contains the context of git hub environment and prints test execution
-name: Output Information
+name: Git Context Information
 on: workflow_dispatch
 jobs:
   infomation_job:
