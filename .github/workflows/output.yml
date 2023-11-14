@@ -1,0 +1,11 @@
+# this file contains the context of git hub environment
+name: Output Information
+on: workflow_dispatch
+jobs:
+  infomation_job:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Output Github Context
+        run: echo "${{toJSON(github)}}"
+
+
