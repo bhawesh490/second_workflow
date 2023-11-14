@@ -1,6 +1,6 @@
 # this file contains the context of git hub environment and prints test execution
 name: Git Context Information
-on: workflow_dispatch
+on: push
 jobs:
   infomation_job:
     runs-on: Ubuntu-latest
